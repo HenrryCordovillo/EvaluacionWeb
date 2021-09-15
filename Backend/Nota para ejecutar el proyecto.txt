@@ -1,0 +1,3 @@
+Primero instalar los siguiente en el Backend
+npm install body-parser connect-multiparty express mongoose
+npm install nodemon --save-dev
