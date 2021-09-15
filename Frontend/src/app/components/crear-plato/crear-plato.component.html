@@ -1,0 +1,36 @@
+<h2>{{ titulo }}</h2>
+
+<form #platoForm="ngForm" (ngSubmit)="guardarPlato(platoForm)">
+<p>
+    <label for="nombre">Nombre del Plato</label>
+    <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="plato.nombre" required>
+    <span class="" *ngIf="nombre.touched && !nombre.valid">Campo obligatorio</span>
+</p>
+<p>
+    <label for="categoria">Categoria del Plato</label>
+    <input type="text" name="categoria" #categoria="ngModel" [(ngModel)]="plato.categoria" required>
+    <span class="" *ngIf="categoria.touched && !categoria.valid">Campo obligatorio</span>
+</p>
+<p>
+    <label for="descripcion">Descripcion del Plato</label>
+    <input type="text" name="descripcion" #descripcion="ngModel" [(ngModel)]="plato.descripcion" required>
+    <span class="" *ngIf="descripcion.touched && !descripcion.valid">Campo obligatorio</span>
+</p>
+<p>
+    <label for="precio">Precio del Plato</label>
+    <input type="number" name="precio" #precio="ngModel" [(ngModel)]="plato.precio" required>
+    <span class="" *ngIf="precio.touched && !precio.valid">Campo obligatorio</span>
+</p>
+
+<p>
+    <label for="imagen">Imagen</label>
+    <span class="" *ngIf="plato.imagen" style="float: left;">
+        <img src="{{url + 'get-imagen/'+plato.imagen}}" style="width: 100px;">
+
+    </span>
+    <input type="file" name="imagen" #fileInput placeholder="Selecionar imagen" (change)="imagenChangeEvent($event)">
+</p>
+
+<input type="submit" value="Guadar" [disabled]="!platoForm.form.valid">
+
+</form>

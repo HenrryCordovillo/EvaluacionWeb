@@ -1,0 +1,18 @@
+<h1>{{titulo}}</h1>
+
+<div>
+    <img src="{{url+'get-imagen/'+plato.imagen}}" *ngIf="plato.imagen">
+    <h4>{{plato.nombre}}</h4>
+    <h4>{{plato.categoria}}</h4>
+    <h4>{{plato.descripcion}}</h4>
+    <h4>{{plato.precio}}</h4>
+   
+   
+    <span>
+        <a [routerLink]="['/editarPlato',plato._id]">Editar</a>
+    </span>
+    <span>
+        <a (click)="borrarPlato(plato._id)">Borrar</a>
+        
+    </span>
+</div>

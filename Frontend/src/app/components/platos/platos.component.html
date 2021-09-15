@@ -1,0 +1,11 @@
+<h1>{{titulo}}</h1>
+
+<ul>
+    <li *ngFor="let plato of platos">
+        <a [routerLink]="['/plato',plato._id]">
+            <img src="{{url+'get-imagen/'+plato.imagen}}" *ngIf="plato.imagen">
+            <h3>{{plato.nombre}} - {{plato.categoria}}</h3>
+        </a>
+       
+    </li>
+</ul>
