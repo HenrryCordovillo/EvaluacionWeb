@@ -1,11 +1,32 @@
-<h1>{{titulo}}</h1>
+<h1 class="text-center">{{ titulo }}</h1>
 
-<ul>
-    <li *ngFor="let plato of platos">
-        <a [routerLink]="['/plato',plato._id]">
-            <img src="{{url+'get-imagen/'+plato.imagen}}" *ngIf="plato.imagen">
-            <h3>{{plato.nombre}} - {{plato.categoria}}</h3>
-        </a>
-       
-    </li>
-</ul>
+<div class="container">
+    <div class="align-items-center">
+    
+      <div class="col">
+        <div class="card border-dark mb-3" *ngFor="let plato of platos">
+            <div class="row g-0 ">
+              <div class="col-md-4">
+                <img
+                src="{{ url + 'get-imagen/' + plato.imagen }}"
+                *ngIf="plato.imagen"
+                class="card-img-top"
+              />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ plato.nombre }}</h5>
+                  <p class="card-text">{{ plato.descripcion }}</p>
+                  <a class="btn btn-primary" [routerLink]="['/plato', plato._id]"
+                  >Ver plato</a
+                >
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    
+    </div>
+  </div>
+

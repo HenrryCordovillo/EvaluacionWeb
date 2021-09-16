@@ -4,6 +4,7 @@ import {PlatosComponent} from './components/platos/platos.component';
 import { CrearPlatoComponent} from './components/crear-plato/crear-plato.component';
 import { DetallePlatoComponent} from './components/detalle-plato/detalle-plato.component';
 import { EditarPlatoComponent} from './components/editar-plato/editar-plato.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: 'guardarPlato', component:CrearPlatoComponent},
   {path: 'plato/:id', component:DetallePlatoComponent},
   {path: 'editarPlato/:id', component:EditarPlatoComponent},
+  {path: 'contacto', component:ContactoComponent},
 ];
 
 @NgModule({

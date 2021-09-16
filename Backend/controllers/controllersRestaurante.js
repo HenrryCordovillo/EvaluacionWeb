@@ -91,7 +91,8 @@ var controller={
                 return res.status(200).send({message:'No existe la imagen'});
             }
         });
-    }
+    },
+
 }
 
 module.exports=controller;

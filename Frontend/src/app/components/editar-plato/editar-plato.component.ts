@@ -53,7 +53,7 @@ export class EditarPlatoComponent implements OnInit {
   }
 
   guardarPlato(form:NgForm){
-    this._platoService.guardarPlato(this.plato).subscribe(
+    this._platoService.updatePlato(this.plato).subscribe(
       response=>{
         if(response.plato){
           if(this.archivosParaCargar){

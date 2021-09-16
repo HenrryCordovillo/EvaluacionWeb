@@ -1,18 +1,25 @@
-<h1>{{titulo}}</h1>
+<h1 class="text-center">{{ titulo }}</h1>
 
-<div>
-    <img src="{{url+'get-imagen/'+plato.imagen}}" *ngIf="plato.imagen">
-    <h4>{{plato.nombre}}</h4>
-    <h4>{{plato.categoria}}</h4>
-    <h4>{{plato.descripcion}}</h4>
-    <h4>{{plato.precio}}</h4>
-   
-   
-    <span>
-        <a [routerLink]="['/editarPlato',plato._id]">Editar</a>
-    </span>
-    <span>
-        <a (click)="borrarPlato(plato._id)">Borrar</a>
-        
-    </span>
+<div class="container">
+  <div class="card border-dark">
+    <img
+      src="{{ url + 'get-imagen/' + plato.imagen }}"
+      *ngIf="plato.imagen"
+      class="card-img-top"
+      alt="Plato {{ plato.nombre }}"
+    />
+    <div class="card-body">
+      <h5 class="card-title">Nombre del plato: {{ plato.nombre }}</h5>
+    </div>
+    <ul class="list-group list-group-flush ">
+      <li class="list-group-item border-dark">Descripcion del plato: {{ plato.descripcion }}</li>
+      <li class="list-group-item border-dark">Categoria del plato: {{plato.categoria}}</li>
+      <li class="list-group-item">Precio del plato: {{plato.precio}}</li>
+    </ul>
+    <div class="card-body">
+      <a [routerLink]="['/editarPlato', plato._id]" class="btn btn-primary " role="button">Editar</a>
+
+      <a (click)="borrarPlato(plato._id)" class="btn btn-primary ms-3" role="button">Borrar</a>
+    </div>
+  </div>
 </div>

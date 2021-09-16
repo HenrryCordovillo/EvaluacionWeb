@@ -34,4 +34,10 @@ export class PlatoService{
 
     }
 
+    updatePlato(plato:Plato):Observable<any>{
+        let params=JSON.stringify(plato);
+        let headers= new HttpHeaders().set('Content-Type','application/json');
+        return this._http.put(this.url+'plato/'+plato._id,params,{headers:headers});
+    }
+
 }

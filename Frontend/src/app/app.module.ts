@@ -9,6 +9,7 @@ import { PlatosComponent } from './components/platos/platos.component';
 import { CrearPlatoComponent } from './components/crear-plato/crear-plato.component';
 import { EditarPlatoComponent } from './components/editar-plato/editar-plato.component';
 import { DetallePlatoComponent } from './components/detalle-plato/detalle-plato.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DetallePlatoComponent } from './components/detalle-plato/detalle-plato.
     PlatosComponent,
     DetallePlatoComponent,
     EditarPlatoComponent,
-    CrearPlatoComponent
+    CrearPlatoComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
