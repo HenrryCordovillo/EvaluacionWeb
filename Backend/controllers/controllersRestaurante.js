@@ -66,7 +66,7 @@ var controller={
             var fileName=file_split[1];
             var extSplit=fileName.split('\.');
             var fileExt=extSplit[1];
-            if(fileExt=='png' || fileExt=='jpg' || fileExt=='jpeg' || fileExt=='gif'){
+            if(fileExt=='png' || fileExt=='jpg' || fileExt=='jpeg' || fileExt=='gif' || fileExt=='webp'){
                 Plato.findByIdAndUpdate(platoId,{imagen:fileName},{new:true},(err,platoUpdated)=>{
                     if(err) return res.status(500).send({message:'La imagen no se ha subido'});
                     if(!platoUpdated) return res.status(404).send({message:'El plato no existe y no se subio la imagen'});
