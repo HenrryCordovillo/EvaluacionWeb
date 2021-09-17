@@ -38,7 +38,7 @@
       <label for="descripcion" class="form-label">Descripcion del Plato</label>
       <textarea
         class="form-control"
-        placeholder="Escriba la categoria del plato"
+        placeholder="Escriba la descripcion del plato"
         name="descripcion"
         #descripcion="ngModel"
         [(ngModel)]="plato.descripcion"
@@ -72,7 +72,7 @@
       <input
         type="text"
         class="form-control"
-        placeholder="Escriba la descripcion del plato"
+        placeholder="Escriba la categoria del plato"
         name="categoria"
         #categoria="ngModel"
         [(ngModel)]="plato.categoria"
@@ -162,7 +162,7 @@
    
 
     <input
-      type="button"
+      type="submit"
       class="btn btn-primary"
       value="Guadar"
       [disabled]="!platoForm.form.valid "
